@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tally</title>
+    <meta name="description" content="A tally counter that works offline." />
+    <meta name="theme-color" content="#1f2328" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Tally</h1>
+      <output id="count" aria-live="polite">0</output>
+      <div class="buttons">
+        <button id="down" type="button" aria-label="Count down">−</button>
+        <button id="up" type="button" aria-label="Count up">+</button>
+      </div>
+      <button id="reset" class="quiet" type="button">Reset</button>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

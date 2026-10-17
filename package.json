@@ -1,0 +1,22 @@
+{
+  "name": "app-lanterns",
+  "private": true,
+  "type": "module",
+  "description": "Small apps for the desktop and the web, with a catalog site that hosts them.",
+  "license": "MIT",
+  "scripts": {
+    "create": "node scripts/create.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test \"scripts/*.test.mjs\" \"apps/*/*.test.mjs\"",
+    "build": "node scripts/build-site.mjs",
+    "dev": "npm run build && node scripts/serve.mjs dist",
+    "icons": "node scripts/icons.mjs"
+  },
+  "devDependencies": {
+    "marked": "18.1.0",
+    "playwright": "1.64.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

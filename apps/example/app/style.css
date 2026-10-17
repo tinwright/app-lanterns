@@ -1,0 +1,61 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f8fa;
+  --fg: #1f2328;
+  --button: #ffffff;
+  --border: #d0d7de;
+  font: 16px/1.4 system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --button: #161b22;
+    --border: #30363d;
+  }
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--fg);
+}
+main {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+output {
+  font-size: clamp(4rem, 20vw, 8rem);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: var(--button);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.buttons button {
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 2rem;
+}
+.quiet {
+  padding: 0.25rem 1rem;
+  opacity: 0.8;
+}
