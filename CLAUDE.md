@@ -59,7 +59,7 @@ icons are there.
 
 ```sh
 npm run check   # manifest, icons, service worker, no remote code, READMEs, tests, secrets
-npm test        # the site, and every app in a real browser
+npm test        # every app in a real browser
 ```
 
 CI runs both, and the private-data guard, which fails on company hosts, internal IDs and work
@@ -75,7 +75,8 @@ the PWA.
 
 ### Site
 
-`npm run build` writes the catalog site to `dist/`, with each app copied to
-`apps/<name>/app/`; `npm run dev` serves it at http://localhost:3000. The Open button and install
-steps come from `scripts/page.js`'s extension points. The build also writes `items.json`, which the
-org-wide gallery at https://tinwright.github.io reads.
+The catalog site at https://tinwright.github.io/app-lanterns is built by `tinwright.github.io` from a
+checkout of this repo, hourly and on demand; nothing here builds or deploys it. Its build copies
+each app to `apps/<name>/app/` (`scripts/rules.mjs` `afterBuild`), and the Open button and install
+steps come from `scripts/site.mjs`. To see it, run `npm run dev` in `tinwright.github.io`, cloned
+next to this repo; its `npm test` checks every page and link.

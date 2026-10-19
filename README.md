@@ -24,8 +24,7 @@ npx playwright install chromium   # once, for the tests and icons
 npm run create -- my-app --description "What it does, in one sentence."
 npm run icons -- my-app           # after changing app/icon.svg
 npm run check   # this workshop's rules (manifest, icons, service worker) and a scan for secrets
-npm test        # the site, and every app in a real browser, offline included
-npm run dev     # the catalog site, with the apps, at http://localhost:3000
+npm test        # every app in a real browser, offline included
 ```
 
 [`CLAUDE.md`](CLAUDE.md) is the full guide, written so Claude can follow it too.

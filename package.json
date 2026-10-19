@@ -8,8 +8,6 @@
     "create": "node scripts/create.mjs",
     "check": "node scripts/check.mjs",
     "test": "node --test \"scripts/*.test.mjs\" \"apps/*/*.test.mjs\"",
-    "build": "node scripts/build-site.mjs",
-    "dev": "npm run build && node scripts/serve.mjs dist",
     "icons": "node scripts/icons.mjs"
   },
   "devDependencies": {
